@@ -6,4 +6,8 @@ class Post < ApplicationRecordhas_many :likes, dependent: :destroy
         User.find(user_id).update(posts_counter: count)
       end
 
+      def recent_comments
+        comments.includes(:author).order('created_at desc').limit(5)
+      end
+
 end  
