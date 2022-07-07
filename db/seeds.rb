@@ -9,3 +9,7 @@ Post.create!([
   {user_id: 1, title: 'Hello3', text: 'This is my 3rd post'}
   {user_id: 2, title: 'Hello4', text: 'This is my 4th post'}
 ]),
+
+Comment.create!([
+  
+])
