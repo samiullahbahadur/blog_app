@@ -12,5 +12,5 @@ Post.create!([
 
 Comment.create!([
   {post_id: 1, user_id: 1, text: 'comment 1'}
-
+  {post_id: 1, user_id: 2, text: 'comment 2'}
 ])
