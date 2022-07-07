@@ -5,4 +5,5 @@ User.create!([
 
 Post.create!([
   {user_id: 1, title: 'Hello', text: 'This is my first post'}
+  {user_id: 2, title: 'Hello2', text: 'This is my 2nd post'}
 ])
