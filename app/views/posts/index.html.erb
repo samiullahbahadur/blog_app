@@ -1,2 +1,5 @@
-<h1>All Posts</h1>
-
+<h1>User posts<h2>
+<% @post.each do |item| %>
+  <p> <%= item.title %> </p>
+  <p> <%= item.text %> </p>
+<% end %> 
