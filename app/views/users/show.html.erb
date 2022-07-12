@@ -1,2 +1,13 @@
-<h1>Users</h1>
-<p>Show user details</p>
+<h1>Show users </h1>
+
+<div>
+ <span><%= @user.photo %></span>
+ <span>
+  <h3><%= @user.name %></h3>
+  <span>Number of post: <%= @user.posts_counter %></span>
+  <p><%= @user.bio %></p>
+ </span>
+ <% @posts.each do |item|%>
+    <p><%= item.title %></p>
+ <%end%>
+</div>  
