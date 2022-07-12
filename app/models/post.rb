@@ -1,5 +1,7 @@
-class Post < ApplicationRecordhas_many :likes, dependent: :destroy
+class Post < ApplicationRecord
+  has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
+
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   
   validates :title, presence: true, length:{ maximum:250}

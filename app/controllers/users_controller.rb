@@ -3,8 +3,8 @@ class UsersController < ApplicationController
     @user=User.all
   end
 
-  def show;
+  def show
   @user=User.find(params[:id])
-  @posts=Post.where(user:@user)
+  
   end
 end
