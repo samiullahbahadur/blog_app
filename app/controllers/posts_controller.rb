@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
-  def index;
+  def index
+    @post=['first post','second post','I think it\'s okay']
   end
 
-  def show;
+  def show
+    @patien=post.find(params[:id])
   end
 end
