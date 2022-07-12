@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'likes/index'
   get 'comments/index'
   root 'users#index'
   resources :users, only: [:index, :show] do
