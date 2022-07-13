@@ -2,4 +2,12 @@
 
 <p>
  <%=@post.title %>
+ <%=@post.text %>
+ <%=@post.comments_counter %>
+ <%=@post.likes_counter %>
+
 </p> 
+<% @comment.each do |c| %>
+    
+    <%= c.text %>
+    <% end %>
