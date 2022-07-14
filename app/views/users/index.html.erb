@@ -1,2 +1,7 @@
 
 <div class = "container">
+<% @user.each do |p| %>
+   <div class = "user-row">
+       <div class = "photo">
+           <%= image_tag p.photo %>
+       </div>
