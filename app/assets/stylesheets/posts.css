@@ -42,3 +42,32 @@
     text-align: center;
   }
   
+  
+
+/* post show style */
+.post-row {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    padding: 0 5px;
+  }
+  
+  .post-text {
+    padding-left: 20px;
+  }
+  
+  .comment-section {
+    border: 1px solid black;
+    padding: 0 5px;
+  }
+  
+  .post-container {
+    border: solid 1px black;
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+  
