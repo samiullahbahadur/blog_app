@@ -1,0 +1,7 @@
+/* user index style */
+.container {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
