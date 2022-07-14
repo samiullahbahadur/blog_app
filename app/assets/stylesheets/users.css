@@ -9,4 +9,9 @@
     display: flex;
     gap: 20px;
   }
+  .photo {
+    height: 100px;
+    width: 90px;
+    border: solid 1px black;
+  }
   
