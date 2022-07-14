@@ -8,15 +8,21 @@
             <p class = "post-counter">Number of posts:<%= @user.posts_counter %></p>
         </div>
     </div>
+
+
     <% @post.each do |p| %>
-      <div class = "post-row">
-          <p class ="post-title"> <%= p.title%></p>
-          <p class ="post-text"><%= p.text%></p>
-          <p class="counters"> Comments: <%= p.comments_counter%>,
-          Likes: <%= p.likes_counter%></P>
-      </div>
-      <div class="comment-section">
-      <% p.most_recent_comments.each do |c|%>
-              <P><%= c.user.name + ": " + c.text%></P>
-      <% end %>
-  </div>
+        <div class = "post-row">
+            <p class ="post-title"> <%= p.title%></p>
+            <p class ="post-text"><%= p.text%></p>
+            <p class="counters"> Comments: <%= p.comments_counter%>,
+            Likes: <%= p.likes_counter%></P>
+        </div>
+        <div class="comment-section">
+            <% p.most_recent_comments.each do |c|%>
+                    <P><%= c.user.name + ": " + c.text%></P>
+            <% end %>
+        </div>
+
+    <%end%>
+    <p class = "pagination"> Pagination </p>
+</div>
