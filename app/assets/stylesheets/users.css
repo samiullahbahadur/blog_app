@@ -14,4 +14,10 @@
     width: 90px;
     border: solid 1px black;
   }
-  
+  .intro-details {
+    height: 100px;
+    width: 85%;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+  }
