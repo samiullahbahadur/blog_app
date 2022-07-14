@@ -1,16 +1,22 @@
 <div class = "container">
     <div class = "post-container">
         <div class="post-header">
-        <p>
-        <%= @post.title %> by
-        <%= @post.author.name%>
-    </p>
-    <p>
-    Comments: <%= @post.comments_counter %>,
-    Likes: <%= @post.likes_counter %>
-</p>
-</div>
-<p class = "post-text">
-    <%= @post.text %>
-</p>
+            <p>
+                <%= @post.title %> by
+                <%= @post.author.name%>
+            </p>
+            <p>
+                Comments: <%= @post.comments_counter %>,
+                Likes: <%= @post.likes_counter %>
+            </p>
+        </div>
+        <p class = "post-text">
+            <%= @post.text %>
+        </p>
+    </div>
+    <div class="comment-section">
+        <% @comment.each do |c|%>
+            <p><%= c.user.name + ": " + c.text%></p>
+        <%end%>
+    </div>
 </div>
