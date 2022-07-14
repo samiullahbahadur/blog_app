@@ -27,4 +27,10 @@
     font-size: 2rem;
     padding-left: 20px;
   }
+  .post-counter {
+    position: relative;
+    padding-right: 10px;
+    align-self: end;
+    top: 60%;
+  }
   
