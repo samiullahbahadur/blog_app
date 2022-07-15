@@ -1,13 +1,22 @@
-<h1>Show a single post details</h1>
-
-<p>
- <%=@post.title %>
- <%=@post.text %>
- <%=@post.comments_counter %>
- <%=@post.likes_counter %>
-
-</p> 
-<% @comment.each do |c| %>
-    
-    <%= c.text %>
-    <% end %>
+<div class = "container">
+    <div class = "post-container">
+        <div class="post-header">
+            <p>
+                <%= @post.title %> by
+                <%= @post.author.name%>
+            </p>
+            <p>
+                Comments: <%= @post.comments_counter %>,
+                Likes: <%= @post.likes_counter %>
+            </p>
+        </div>
+        <p class = "post-text">
+            <%= @post.text %>
+        </p>
+    </div>
+    <div class="comment-section">
+        <% @comment.each do |c|%>
+            <p><%= c.user.name + ": " + c.text%></p>
+        <%end%>
+    </div>
+</div>

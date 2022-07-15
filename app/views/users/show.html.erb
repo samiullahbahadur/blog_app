@@ -1,14 +1,25 @@
-<h1>Show users </h1>
-
-<div>
- <span><%= @user.photo %></span>
- <span>
-  <h3><%= @user.name %></h3>
-  <span>Number of post: <%= @user.posts_counter %></span>
-  <p><%= @user.bio %></p>
- </span>
- <% @post.each do |p| %>
-    <p><%= p.title %></p>
-    <p><%= p.text %></p>
- <% end %>
-</div>  
+<div class = "container">
+    <div class = "user-row">
+        <div class = "photo">
+            <%= image_tag @user.photo %>
+        </div>
+        <div class = "intro-details">
+            <p class = "user-name"><%= @user.name %></p>
+            <p class = "post-counter">Number of posts:<%= @user.posts_counter %></p>
+        </div>
+    </div>
+    <div class = "bio">
+        <p> Bio</p>
+        <p><%= @user.bio %></p>
+    </div>
+    <% @post.each do |p| %>
+        <div class = "post-row">
+            <p class ="post-title"> <%= p.title%></p>
+            <p class ="post-text"><%= p.text%></p>
+            <p class="counters"> Comments: <%= p.comments_counter%>,
+            Likes: <%= p.likes_counter%></P>
+        </div>
+        <%= link_to 'See all posts', user_posts_path(@user)   %>
+    <%end%>
+        <p class = "pagination"> Pagination </p>
+</div>

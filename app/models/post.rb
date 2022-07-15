@@ -8,11 +8,12 @@ class Post < ApplicationRecord
   validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  def update_counter()
-    author.increment!(:posts_counter)
+  after_save :update_counters
+  def update_counters
+    author.update(posts_counter: author.posts.count)
   end
 
-  def recent_comments
-    comments.includes(:author).order('created_at desc').limit(5)
+  def most_recent_comments
+    comments.limit(5).order(created_at: :desc)
   end
 end

@@ -1,5 +1,28 @@
-<h1>User posts<h2>
-<% @post.each do |item| %>
-  <p> <%= item.title %> </p>
-  <p> <%= item.text %> </p>
-<% end %> 
+<div class = "container">
+    <div class = "user-row">
+        <div class = "photo">
+            <%= image_tag @user.photo %>
+        </div>
+        <div class = "intro-details">
+            <p class = "user-name"><%= @user.name %></p>
+            <p class = "post-counter">Number of posts:<%= @user.posts_counter %></p>
+        </div>
+    </div>
+
+
+    <% @post.each do |p| %>
+        <div class = "post-row">
+            <p class ="post-title"> <%= p.title%></p>
+            <p class ="post-text"><%= p.text%></p>
+            <p class="counters"> Comments: <%= p.comments_counter%>,
+            Likes: <%= p.likes_counter%></P>
+        </div>
+        <div class="comment-section">
+            <% p.most_recent_comments.each do |c|%>
+                    <P><%= c.user.name + ": " + c.text%></P>
+            <% end %>
+        </div>
+        <%= link_to 'See all users', users_path   %>
+    <%end%>
+    <p class = "pagination"> Pagination </p>
+</div>
