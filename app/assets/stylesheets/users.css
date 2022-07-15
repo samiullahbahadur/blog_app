@@ -19,7 +19,7 @@
   
   .intro-details {
     height: 100px;
-    width: 85%;
+    width: 90%;
     border: solid 1px black;
     display: flex;
     flex-direction: column;

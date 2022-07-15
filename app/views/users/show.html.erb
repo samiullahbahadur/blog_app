@@ -19,6 +19,7 @@
             <p class="counters"> Comments: <%= p.comments_counter%>,
             Likes: <%= p.likes_counter%></P>
         </div>
+        <%= link_to 'See all posts', user_posts_path(@user)   %>
     <%end%>
         <p class = "pagination"> Pagination </p>
 </div>
