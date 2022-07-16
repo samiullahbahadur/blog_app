@@ -55,9 +55,7 @@
 #                   { posts_id: 1, users_id: 1, text: 'comment 6' }
 #                 ])
 
-
-
 User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
 Post.create(author_id: 1, title: 'Hello', text: 'This is my first post')
-Comment.create(post_id: 1, author_id: 1, text: 'Hi Tom!' )
-#Like.create(post_id: 1, author_id: 1 )
+Comment.create(post_id: 1, author_id: 1, text: 'Hi Tom!')
+# Like.create(post_id: 1, author_id: 1 )
