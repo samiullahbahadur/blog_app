@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+a {
+  text-decoration: none;
+}
+
+.enter-comment {
+  display: flex;
+  gap: 2px;
+}
+
+.text-area {
+  width: 80%;
+}
+
+.new-post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-post-text {
+  width: 250px;
+}

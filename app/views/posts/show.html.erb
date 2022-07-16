@@ -3,20 +3,31 @@
         <div class="post-header">
             <p>
                 <%= @post.title %> by
-                <%= @post.author.name%>
+                <%= @post.user.name%>
             </p>
-            <p>
-                Comments: <%= @post.comments_counter %>,
-                Likes: <%= @post.likes_counter %>
+            <p class = "post-text">
+                <%= @post.text %>
             </p>
+            <div class="ind-post-footer">
+                <%= button_to 'Like', user_post_likes_path(@post.user_id, @post) %>
+                <p>
+                    Comments: <%= @post.comments_counter %>,Likes: <%= @post.likes_counter %>
+                </p>
+            </div>
         </div>
-        <p class = "post-text">
-            <%= @post.text %>
-        </p>
+
+
     </div>
+    <%= render '/comments/new' %>
     <div class="comment-section">
-        <% @comment.each do |c|%>
+        <% @post.most_recent_comments.each do |c|%>
             <p><%= c.user.name + ": " + c.text%></p>
         <%end%>
     </div>
+
+    <div class='post-footer'>
+        <button><%= link_to 'Back to posts', user_posts_path(@post.user_id) %></button> 
+        <button><%= link_to 'Back to users', root_path %></button>
+    </div>
+    
 </div>
