@@ -12,7 +12,101 @@
   }
   
   .photo {
-    height: 100px;
+    height: 100px;/* post index style */
+    .container {
+      padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .user-row {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .photo {
+      height: 100px;
+      width: 90px;
+      border: solid 1px black;
+    }
+    
+    .intro-details {
+      height: 100px;
+      width: 85%;
+      border: solid 1px black;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .user-name {
+      position: absolute;
+      font-size: 2rem;
+      padding-left: 20px;
+    }
+    
+    .post-counter {
+      position: relative;
+      padding-right: 10px;
+      align-self: end;
+      top: 60%;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .user-post-link {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .user-post-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    /* post show style */
+    .post-row {
+      display: flex;
+      flex-direction: column;
+      border: solid 1px black;
+      padding: 0 5px;
+    }
+    
+    .post-text {
+      padding-left: 20px;
+    }
+    
+    .comment-section {
+      border: 1px solid black;
+      padding: 0 5px;
+    }
+    
+    .post-container {
+      border: solid 1px black;
+    }
+    
+    .post-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 5px;
+    }
+    
+    .ind-post-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    button {
+      margin-top: 10px;
+    }
+    
+    .post-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 10px;
     width: 90px;
     border: solid 1px black;
   }
