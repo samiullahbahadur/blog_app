@@ -5,12 +5,14 @@
     <div class = "photo">
         <%= image_tag p.photo %>
     </div>
-    <div class = "intro-details">
-       <p class = "user-name"> <%= p.name  %> </p>
-       <p class = "post-counter">
+    <div class = "u-intro-details">
+       <p class = "u-user-name"> <%= p.name  %> </p>
+       <div class = "u-post-counter">
             <button> <%= link_to 'View profile', user_path(p) %></button>
-            Number of posts:  <%= p.posts_counter %> 
-       </p>
-       
+            <p>Number of posts:  <%= p.posts_counter %></p>
+       </div>
     </div>    
+</div>
+
+<%end%>
 </div>
