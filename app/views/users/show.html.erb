@@ -5,21 +5,25 @@
         </div>
         <div class = "intro-details">
             <p class = "user-name"><%= @user.name %></p>
-            <p class = "post-counter">Number of posts:<%= @user.posts_counter %></p>
+            <p class = "user-post-counter">Number of posts:<%= @user.posts_counter %></p>
         </div>
     </div>
     <div class = "bio">
         <p> Bio</p>
         <p><%= @user.bio %></p>
     </div>
-    <% @post.each do |p| %>
+    <% @user.recent_posts.each do |p| %>
         <div class = "post-row">
             <p class ="post-title"> <%= p.title%></p>
             <p class ="post-text"><%= p.text%></p>
-            <p class="counters"> Comments: <%= p.comments_counter%>,
-            Likes: <%= p.likes_counter%></P>
+            <p class="posts-footer">
+                <button> <%= link_to 'View Post', user_post_url(@user, p) %></button>
+                Comments: <%= p.comments_counter%>, Likes: <%= p.likes_counter%>
+            </p>
+            
         </div>
-        <%= link_to 'See all posts', user_posts_path(@user)   %>
     <%end%>
-        <p class = "pagination"> Pagination </p>
+    <p class="posts-link">
+        <button><%= link_to 'See all posts', user_posts_path(@user), class: "btn-link" %></button>
+    </p>
 </div>
