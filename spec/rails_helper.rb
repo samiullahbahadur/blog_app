@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'ffi'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 

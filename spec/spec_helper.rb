@@ -1,6 +1,11 @@
 require 'capybara/rspec'
 
 RSpec.configure do |config|
+
+  if Bullet.enable?
+    config.before(:each) { Bullet.start_request }
+    config.after(:each)  { Bullet.end_request }
+  end
  
   config.expect_with :rspec do |expectations|
   
@@ -28,5 +33,10 @@ RSpec.configure do |config|
   config.order = :random
 
   Kernel.srand config.seed
-=end
+
 end
+
+RSpec.configure do |config|
+  
+end
+

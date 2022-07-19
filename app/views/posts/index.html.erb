@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="comment-section">
-            <% p.most_recent_comments.each do |c|%>
+            <% p.most_recent_comments.includes([:user]).each do |c|%>
                     <P><%= c.user.name + ": " + c.text%></P>
             <% end %>
         </div>

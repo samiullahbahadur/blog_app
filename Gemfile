@@ -18,7 +18,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "tzinfo-data"
-gem 'bullet'
+gem 'bullet', group: 'development'
+
 
 
 gem "bootsnap", require: false
@@ -45,3 +46,4 @@ end
 #   gem "selenium-webdriver"
 #   gem "webdrivers"
 # end
+gem 'ffi'
