@@ -29,15 +29,15 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_valid
   end
 
-  context '#most_recent_posts' do
+  context '#recent_posts' do
     before(:each) do
       5.times do |i|
-        Post.new(title: "Post #{i}", text: "text#{i}", comments_counter: 0, likes_counter: 0, author_id: user.id)
+        Post.new(title: "Post #{i}", text: "text#{i}", comments_counter: 0, likes_counter: 0, user_id: user.id)
       end
     end
 
     it 'should return the 3 latest posts' do
-      expect(user.recent_posts).to eq(Post.order(created_at: :desc).limit(3))
+      expect(user.recent_posts).to eq(Post.limit(3).order(created_at: :desc))
     end
   end
 end
