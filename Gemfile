@@ -18,21 +18,30 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "tzinfo-data"
+gem 'bullet'
+
 
 gem "bootsnap", require: false
 
+# group :development, :test do
+#   gem "debug", platforms: %i[mri mingw x64_mingw]
+#   gem 'rails-controller-testing'
+#   gem 'rspec-rails'
+# end
 group :development, :test do
-  gem "debug", platforms: %i[mri mingw x64_mingw]
-  gem 'rails-controller-testing'
+  gem 'capybara'
+  gem 'database_cleaner'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
 end
 
-group :development do
-  gem "web-console"
-end
 
-group :test do
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
-end
+# group :development do
+#   gem "web-console"
+# end
+
+# group :test do
+#   gem "capybara"
+#   gem "selenium-webdriver"
+#   gem "webdrivers"
+# end
