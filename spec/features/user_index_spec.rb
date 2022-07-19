@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Post index page test', type: :feature do
   before :each do
     User.destroy_all
-    @first_user = User.create(name: 'Sediq', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
+    @first_user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
     @second_user = User.create(name: 'Emily', photo: 'https://unsplash.com/6519861_z.jpg',
                                bio: 'A teacher from Poland')
     @first_user.save
@@ -13,7 +13,7 @@ RSpec.describe 'Post index page test', type: :feature do
   end
 
   it 'I can see the username of all other users.' do
-    expect(page).to have_content('Sediq')
+    expect(page).to have_content('sami')
     expect(page).to have_content('Emily')
   end
 
@@ -30,8 +30,8 @@ RSpec.describe 'Post index page test', type: :feature do
   end
 
   it 'When I click on a user, I am redirected to that users show page.' do
-    click_link 'Sediq'
-    expect(page).to have_content('Sediq')
+    click_link 'sami'
+    expect(page).to have_content('sami')
     expect(page).to have_current_path("/users/#{@first_user.id}")
   end
 end

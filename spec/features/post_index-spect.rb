@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Post index page', type: :feature do
   it 'should show the user profile picture' do
-    user = User.create(name: 'Sediq', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
+    user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
     Post.create(title: 'Post1', text: 'Text1', user_id: user.id)
     visit "/users/#{user.id}/posts"
 

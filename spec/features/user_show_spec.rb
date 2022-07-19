@@ -4,7 +4,7 @@ RSpec.describe 'User show page test', type: :feature do
   before :each do
     User.destroy_all
     Post.destroy_all
-    @user = User.create(name: 'Sediq', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
+    @user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
     @user.save
     @post1 = Post.create(title: 'Post 1', text: 'This is Post 1', user_id: @user.id)
     @post2 = Post.create(title: 'Post 2', text: 'This is Post 2', user_id: @user.id)
@@ -15,21 +15,21 @@ RSpec.describe 'User show page test', type: :feature do
   end
 
   it 'I can see the user\'s profile picture.' do
-    # user = User.create(name: 'Sediq', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
+    # user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
 
     # visit "/users/#{user.id}"
     expect(page).to have_xpath("//img[@src = '#{@user.photo}' ]")
   end
 
   it 'I can see the user\'s username.' do
-    # user = User.create(name: 'Sediq', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
+    # user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
 
     # visit "/users/#{user.id}"
-    expect(page).to have_content('Sediq')
+    expect(page).to have_content('sami')
   end
 
   it 'I can see the number of posts the user has written.' do
-    # user = User.create(name: 'Sediq', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
+    # user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
     # Post.create(title: 'My first post', text: 'This is my first post', user_id: user.id)
 
     # visit "/users/#{user.id}"
