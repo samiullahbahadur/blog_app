@@ -61,3 +61,4 @@ RSpec.describe 'User show page test', type: :feature do
     visit "/users/#{@user.id}"
     expect(page).to have_button('See all posts')
   end
+end
