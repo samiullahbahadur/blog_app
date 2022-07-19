@@ -28,3 +28,10 @@ RSpec.describe 'Post index page test', type: :feature do
       expect(page).to have_content("Number of posts: #{user.posts_counter}")
     end
   end
+
+  it 'When I click on a user, I am redirected to that users show page.' do
+    click_link 'Sediq'
+    expect(page).to have_content('Sediq')
+    expect(page).to have_current_path("/users/#{@first_user.id}")
+  end
+end
