@@ -5,7 +5,6 @@
 
 # require 'capybara/rails'
 
-
 # abort("The Rails environment is running in production mode!") if Rails.env.production?
 # require 'rspec/rails'
 
@@ -24,7 +23,6 @@
 
 #   config.filter_rails_from_backtrace!
 # end
-
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 

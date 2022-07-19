@@ -20,8 +20,6 @@
 # gem "tzinfo-data"
 # gem 'bullet', group: 'development'
 
-
-
 # gem "bootsnap", require: false
 
 # # group :development, :test do
@@ -35,7 +33,6 @@
 #   gem 'rspec-rails'
 #   gem 'selenium-webdriver'
 # end
-
 
 # # group :development do
 # #   gem "web-console"
@@ -51,8 +48,6 @@
 # gem 'nokogiri', '~> 1.13.7'
 # gem 'rack',  '~>2.2.4'
 # gem 'rack-test',  '~>2.0.2'
-
-
 
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
