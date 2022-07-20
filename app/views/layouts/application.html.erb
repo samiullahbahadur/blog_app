@@ -10,7 +10,10 @@
   </head>
 
   <body>
-  
+  <% if current_user %>
+   <p> <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %></p>
+  <%end%>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
