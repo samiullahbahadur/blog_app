@@ -20,7 +20,7 @@
     </div>
     <%= render '/comments/new' %>
     <div class="comment-section">
-        <% @post.most_recent_comments.each do |c|%>
+        <% @post.most_recent_comments.includes([:user]).each do |c|%>
             <p><%= c.user.name + ": " + c.text%></p>
         <%end%>
     </div>

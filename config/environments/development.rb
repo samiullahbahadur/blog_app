@@ -14,6 +14,13 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.bullet_logger = true
+    Bullet.raise = true
+    # raise an error if an n+1 query occurs
+  end
+
   # Enable server timing
   config.server_timing = true
 
