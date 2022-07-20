@@ -1,7 +1,10 @@
 <div class = "container">
     <div class = "user-row">
         <div class = "photo">
-            <%= image_tag @user.photo %>
+        <% if @user.photo%>
+        <%= image_tag @user.photo %>
+    <%end%>
+
         </div>
         <div class = "intro-details">
             <p class = "user-name"><%= @user.name %></p>
