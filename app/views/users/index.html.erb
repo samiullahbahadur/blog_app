@@ -3,7 +3,10 @@
 <% @user.each do |p| %>
 <div class = "user-row">
     <div class = "photo">
-        <%= image_tag p.photo %>
+        <% if p.photo%>
+                <%= image_tag p.photo %>
+            <% end %>
+
     </div>
     <div class = "u-intro-details">
        <p class = "u-user-name"> <%= link_to p.name, p %> </p>
