@@ -15,24 +15,17 @@ RSpec.describe 'User show page test', type: :feature do
   end
 
   it 'I can see the user\'s profile picture.' do
-    # user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
-
-    # visit "/users/#{user.id}"
+   
     expect(page).to have_xpath("//img[@src = '#{@user.photo}' ]")
   end
 
   it 'I can see the user\'s username.' do
-    # user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
-
-    # visit "/users/#{user.id}"
+ 
     expect(page).to have_content('sami')
   end
 
   it 'I can see the number of posts the user has written.' do
-    # user = User.create(name: 'sami', photo: 'https://unsplash.com/6519861_z.jpg', bio: 'A teacher')
-    # Post.create(title: 'My first post', text: 'This is my first post', user_id: user.id)
-
-    # visit "/users/#{user.id}"
+  
     expect(page).to have_content("Number of posts:#{@user.posts.count}")
     expect(page).to have_content('Number of posts:4')
   end
