@@ -15,14 +15,17 @@ RSpec.describe 'User show page test', type: :feature do
   end
 
   it 'I can see the user\'s profile picture.' do
+
     expect(page).to have_xpath("//img[@src = '#{@user.photo}' ]")
   end
 
   it 'I can see the user\'s username.' do
+
     expect(page).to have_content('sami')
   end
 
   it 'I can see the number of posts the user has written.' do
+
     expect(page).to have_content("Number of posts:#{@user.posts.count}")
     expect(page).to have_content('Number of posts:4')
   end
