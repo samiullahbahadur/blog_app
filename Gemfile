@@ -133,3 +133,5 @@ gem 'rails-controller-testing'
 # eager loading with Bullet
 gem 'bullet'
 gem 'devise'
+gem "letter_opener"
+
