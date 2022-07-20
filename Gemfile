@@ -134,4 +134,3 @@ gem 'rails-controller-testing'
 gem 'bullet'
 gem 'devise'
 gem "letter_opener"
-
