@@ -129,9 +129,10 @@ end
 gem 'ffi'
 # assert_template controller testing
 gem 'rails-controller-testing'
-
 # eager loading with Bullet
 gem 'bullet'
+
 gem 'devise'
 gem "letter_opener"
 gem 'cancancan'
+
