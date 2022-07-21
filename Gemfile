@@ -134,5 +134,5 @@ gem 'bullet'
 
 gem 'devise'
 gem "letter_opener"
-
+gem 'cancancan'
 
