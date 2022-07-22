@@ -10,12 +10,13 @@ class Post < ApplicationRecord
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   after_save :update_counters
-  after_destroy :update_counters
+  after_destroy :strdeoy_update_counters
+
   def update_counters
     user.increment!(:posts_counter)
   end
 
-  def update_counters
+  def strdeoy_update_counters
     user.decrement!(:posts_counter)
   end
 
