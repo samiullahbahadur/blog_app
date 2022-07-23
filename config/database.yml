@@ -10,14 +10,14 @@ development:
   <<: *default
   database: blog_development
   username: postgres
-  password: Bahadur@123
+  password: sb
 
 
 test:
   <<: *default
   database: blog_test
   username: postgres
-  password: Bahadur@123
+  password: sb
 
 production:
   <<: *default
