@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-
-  post '/login', to: 'authentication#login', default: {:format => :json}
-  post '/signup', to: 'authentication#signup', default: {:format => :json}
+  post '/login', to: 'authentication#login', default: { :format => :json }
+  post '/signup', to: 'authentication#signup', default: { :format => :json }
 
   namespace 'api' do
     namespace 'v1' do
@@ -10,7 +9,6 @@ Rails.application.routes.draw do
       post 'posts/:post_id/comment' => 'api#add_comment_to_post'
     end
   end
-
 
   devise_scope :user do
     # Redirects signing out users back to sign-in
