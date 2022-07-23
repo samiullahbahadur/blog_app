@@ -136,3 +136,7 @@ gem 'devise'
 gem "letter_opener"
 gem 'cancancan'
 
+gem 'jwt'
+
+
+
