@@ -11,15 +11,20 @@ class Post < ApplicationRecord
 
   after_save :update_counters
 
+
   after_destroy :destory_post_counters
+
+ 
 
   def update_counters
     user.increment!(:posts_counter)
   end
 
+
   def destory_post_counters
     user.decrement(:posts_counter)
-  end
+
+  
 
   def most_recent_comments
     comments.limit(5).order(created_at: :desc)
